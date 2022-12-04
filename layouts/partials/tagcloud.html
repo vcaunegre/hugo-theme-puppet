@@ -31,10 +31,10 @@
 {{ end }}
 </style>
 <div id='tag_cloud' class="tags tags-sup js-tags">
-  <a class="tag-button--all" data-encode="">
+  <div class="tag-button--all" data-encode="">
     Show All
     <sup>{{ len $pages }}</sup>
-  </a>
+  </div>
 
   {{ range .Site.Taxonomies.tags.ByCount }}
 <a data-sort="{{ printf " %04d" (sub (len $pages) .Count) }}" data-encode="{{ .Page.Title | lower | urlquery }}"
