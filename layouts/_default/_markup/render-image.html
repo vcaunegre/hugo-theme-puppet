@@ -1,7 +1,7 @@
 <figure>
   <div class="paragraph-image">
     <img
-      data-src="{{ .Destination | safeURL }}"
+      src="{{ .Destination | safeURL }}"
       data-action="zoom"
       alt="{{ .Text }}"
       {{
@@ -12,7 +12,6 @@
       {{
       end
       }}
-      class="lazyload"
     />
   </div>
   {{ with .Title }}
